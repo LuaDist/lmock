@@ -1,0 +1,32 @@
+* lmock 0.5 release
+------------------------------
++ add makefile to install lmock in local
++ more easy way to use lmock: make the lmock to be a command, do the unit-test
+lmock your_test_file
++ clean failed report. when a test failed, the stack trace info only print on test running step,
+but not print to failed report at last
+
+* lmock 0.4 release
+-----------------------------
++ change directory structure , for easy use
++ import luaunit_v13 to lmock, you can use lmock at once without download it
++ add an export file , for easy use lmock : just do require"lmock.export"
++ acknowledge luaunit
++ fix method name parse patterns
++ do not check mock-method existence by default
+
+* lmock 0.3 release
+-----------------------------
++ search mocked function by parameters matching ( v0.2 is by order you define )
++ more detail when unit-test fail , a better formatted message , like mockcpp
++ add new expect invoke on mocker ( never() )
++ add new invoker type , stubs()
+
+* lmock 0.2 release
+----------------------------
++ parse and mock at method
++ test a method in mock environment
++ expect invoke on mocker ( once() , exactly( times ) , range( a , b ) )
++ default invoke on mocker
++ parameter matcher ( eq( a ) , eqx( a ) , any() )
++ return value by mocker

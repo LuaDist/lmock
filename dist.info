@@ -1,0 +1,15 @@
+--- This file is part of LuaDist project
+
+name = "lmock"
+version = "0.5"
+
+desc = "lmock is a mock framework for Lua, a toolkit for unit-test."
+author = "Wenhai Huang"
+license = "X11 License"
+maintainer = "Peter Kapec"
+url = "http://luaforge.net/projects/lmock/"
+
+depends = {
+	"lua ~> 5.1",
+	"luaunit >= 1.3"
+}

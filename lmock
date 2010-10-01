@@ -1,0 +1,4 @@
+#!/bin/bash
+echo off
+export LUA_PATH=$LUA_PATH";?.lua;$HOME/bin/lua/lmock/?.lua;./src/?.lua"
+lua -llmock $@
