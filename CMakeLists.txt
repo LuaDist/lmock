@@ -1,17 +1,20 @@
-# Copyright (C) 2007-2009 LuaDist.
+# Copyright (C) 2007-2012 LuaDist.
 # Created by Peter Kapec
 # Redistribution and use of this file is allowed according to the terms of the MIT license.
 # For details see the COPYRIGHT file distributed with LuaDist.
 # Please note that the package source code is licensed under its own license.
 
-PROJECT(lmock NONE)
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-INCLUDE(dist.cmake)
+project ( lmock NONE )
+cmake_minimum_required ( VERSION 2.8 )
+include ( cmake/dist.cmake )
+include ( lua )
 
 # Install all files and documentation
-INSTALL (DIRECTORY src/ DESTINATION ${INSTALL_LMOD})
-INSTALL (FILES LICENSE.txt README.txt DESTINATION ${INSTALL_DATA})
-INSTALL (FILES sample.lua DESTINATION ${INSTALL_EXAMPLE})
-INSTALL (FILES run_sample.bat DESTINATION ${INSTALL_EXAMPLE})
-INSTALL (FILES run_test.bat DESTINATION ${INSTALL_TEST})
-INSTALL (DIRECTORY ut/ DESTINATION ${INSTALL_TEST})
+install_lua_module ( lmock src/lmock.lua )
+install_lua_module ( luaunit src/luaunit.lua )
+install_lua_module ( mock_env src/mock_env.lua )
+install_lua_module ( mock_invoker src/mock_invoker.lua )
+install_lua_module ( mock_method src/mock_method.lua )
+install_data ( LICENSE.txt README.txt )
+install_example ( sample.lua )
+install_test ( ut/ )
